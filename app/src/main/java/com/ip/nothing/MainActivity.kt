@@ -7,11 +7,9 @@ import com.ip.nothing.databinding.ActivityMainBinding
 
 
 import android.view.WindowManager
-import android.os.Build
-
 import android.view.View
 
-public class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
     private var _binding: ActivityMainBinding? = null
     
@@ -24,10 +22,8 @@ public class MainActivity : AppCompatActivity() {
 
         // If the Android version is lower than Jellybean, use this call to hide
         // the status bar.
-        if (Build.VERSION.SDK_INT < 16) {
-            window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                    WindowManager.LayoutParams.FLAG_FULLSCREEN)
-            }
+        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN)
 
         // Hide the status bar.
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
@@ -41,10 +37,7 @@ public class MainActivity : AppCompatActivity() {
 
         // set content view to binding's root
         setContentView(binding.root)
-        
-        
-          
-        
+
     }
     
     override fun onDestroy() {
